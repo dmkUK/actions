@@ -2,5 +2,9 @@ name: Post welcolme comment
 on:
   pull_request:
     types: [opened]
-  permissions:
-    pull-requests: write
+permissions:
+  pull-requests: write
+jobs:
+  build:
+    name: Post welcolme comment
+    runs-on: ubuntu-latest
