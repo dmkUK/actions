@@ -8,3 +8,8 @@ jobs:
   build:
     name: Post welcolme comment
     runs-on: ubuntu-latest
+    steps:
+      - run: gh pr comment $PR_URL --body "Welcolme to the repository!"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_URL: ${{ github.event.pull_requeat.html_url }}
